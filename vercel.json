@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/html/all-pages-view.html" },
+    { "source": "/:path*", "destination": "/html/:path*" }
+  ]
+}
