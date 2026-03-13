@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7개 영역 통합 비교 매트릭스</title>
+    <title>통합 비교 매트릭스</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -127,7 +127,10 @@
             border-top: 2px solid #EF4444;
             border-left: 2px solid #EF4444;
             border-right: 2px solid #EF4444;
+            border-bottom: 2px solid #EF4444;
         }
+        .matrix-row:last-child .col-target { border-bottom: 2px solid #EF4444; }
+        .matrix-container { padding-bottom: 2px; }
         p, span, div, h1, h2, h3, h4, h5, h6 { word-break: keep-all; }
     </style>
 </head>
@@ -135,7 +138,7 @@
     <div class="slide-container">
         <!-- Header -->
         <div class="toc-header px-10 py-5 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">7개 영역 통합 비교 매트릭스</h1>
+            <h1 class="text-2xl font-bold text-gray-800">통합 비교 매트릭스</h1>
             <div class="header-logos">
                 <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
                 <span class="border-l border-gray-300 h-4"></span>
