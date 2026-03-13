@@ -6,9 +6,9 @@ const fs = require('fs');
 const PAGE_ORDER = [
   '01-benchmark-report-page.html',
   '00-index.html',
+  '00a-section1.html',
   '02-report-meta-page.html',
   '03-analysis-purpose-scope-page.html',
-  '00a-section1.html',
   '04-site-diagnosis-page.html',
   '05-pain-points-page.html',
   '00b-section2.html',
