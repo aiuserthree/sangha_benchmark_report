@@ -1,0 +1,12 @@
+{
+  "name": "sangha-benchmark-report",
+  "version": "1.0.0",
+  "description": "상하농원몰 벤치마킹 분석 리포트",
+  "scripts": {
+    "pdf": "node scripts/generate-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "pdf-lib": "^1.17.1"
+  }
+}
