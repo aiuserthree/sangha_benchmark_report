@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>권고안 및 실행 로드맵 (하)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1F2937;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 0.5rem;
+            word-break: keep-all;
+        }
+        .timeline-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 1rem;
+            height: 100%;
+            position: relative;
+        }
+        .timeline-container::before {
+            display: none;
+        }
+        .phase-card {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            min-width: 0;
+        }
+        .phase-marker {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            flex-shrink: 0;
+            margin-bottom: 0.5rem;
+        }
+        .phase-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 3px solid white;
+            margin-bottom: 0.4rem;
+        }
+        .phase-duration {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 0.2rem 0.4rem;
+            border-radius: 1rem;
+            background-color: white;
+            border: 1px solid #E5E7EB;
+            width: 80px;
+            word-break: keep-all;
+        }
+        .phase-content {
+            flex: 1;
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E5E7EB;
+            margin-left: 0;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #E5E7EB;
+            padding-bottom: 0.4rem;
+        }
+        .phase-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            word-break: keep-all;
+        }
+        .phase-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            word-break: keep-all;
+        }
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            flex: 1;
+        }
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .task-icon {
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.8rem;
+        }
+        .task-desc {
+            font-size: 0.9rem;
+            color: #4B5563;
+            line-height: 1.4;
+            word-break: keep-all;
+            margin: 0;
+        }
+        .p1 .phase-circle { background-color: #059669; }
+        .p1 .phase-duration { color: #059669; border-color: #A7F3D0; background-color: #ECFDF5; }
+        .p1 .phase-title { color: #065F46; }
+        .p1 .phase-tag { background-color: #ECFDF5; color: #065F46; }
+        .p1 .task-icon { background-color: #D1FAE5; color: #059669; }
+        .p1 .phase-content { border-left: 4px solid #059669; }
+        .p2 .phase-circle { background-color: #2563EB; }
+        .p2 .phase-duration { color: #2563EB; border-color: #BFDBFE; background-color: #EFF6FF; }
+        .p2 .phase-title { color: #1E40AF; }
+        .p2 .phase-tag { background-color: #EFF6FF; color: #1E40AF; }
+        .p2 .task-icon { background-color: #DBEAFE; color: #2563EB; }
+        .p2 .phase-content { border-left: 4px solid #2563EB; }
+        .p3 .phase-circle { background-color: #0D9488; }
+        .p3 .phase-duration { color: #0D9488; border-color: #99F6E4; background-color: #F0FDFA; }
+        .p3 .phase-title { color: #0F766E; }
+        .p3 .phase-tag { background-color: #F0FDFA; color: #0F766E; }
+        .p3 .task-icon { background-color: #CCFBF1; color: #0D9488; }
+        .p3 .phase-content { border-left: 4px solid #0D9488; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">권고안 및 실행 전략 (2/2)</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 p-6 overflow-hidden flex flex-col">
+            <div class="flex gap-6 flex-1 min-h-0">
+            <div class="flex-1 flex flex-col min-w-0">
+            <h2 class="section-title mb-4">
+                <i class="fas fa-stream text-green-700"></i> 3단계 실행 로드맵
+            </h2>
+            <div class="timeline-container flex-1 py-1">
+                <!-- Phase 1 -->
+                <div class="phase-card p1">
+                    <div class="phase-marker">
+                        <div class="phase-circle">1</div>
+                        <div class="phase-duration">1~2개월</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <h3 class="phase-title">Phase 1: 기반 구축 (Foundation)</h3>
+                            <span class="phase-tag">핵심 구조 설계</span>
+                        </div>
+                        <div class="task-grid">
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-sitemap"></i></div>
+                                <p class="task-desc"><strong>통합 네비게이션 설계:</strong> 농원·리조트·쇼핑을 아우르는 직관적 IA 구조 확정 및 메뉴 트리 재구성</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-id-card"></i></div>
+                                <p class="task-desc"><strong>One-ID 범위 확정:</strong> 통합 로그인 정책 수립 및 기존 회원 데이터 마이그레이션 계획 수립</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-search"></i></div>
+                                <p class="task-desc"><strong>AS-IS 분석 상세화:</strong> 기존 시스템 데이터베이스 구조 분석 및 통합 가능성 기술 검토</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-pencil-ruler"></i></div>
+                                <p class="task-desc"><strong>UI/UX 프로토타입:</strong> 모바일 퍼스트 기준의 핵심 화면(메인, 상세) 와이어프레임 제작</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-card p2">
+                    <div class="phase-marker">
+                        <div class="phase-circle">2</div>
+                        <div class="phase-duration">3~6개월</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <h3 class="phase-title">Phase 2: 핵심 기능 구현 (Core Implementation)</h3>
+                            <span class="phase-tag">Must-Have 개발</span>
+                        </div>
+                        <div class="task-grid">
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-code"></i></div>
+                                <p class="task-desc"><strong>Must-Have 개발:</strong> 통합 결제 모듈 연동 및 예약/주문 통합 조회 시스템 구축 완료</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <p class="task-desc"><strong>통합 장바구니:</strong> 숙박, 체험, 농산물을 한 번에 결제 가능한 장바구니 프로세스 구현</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-swatchbook"></i></div>
+                                <p class="task-desc"><strong>디자인 시스템 정립:</strong> R-2(자연 비주얼) 컨셉을 반영한 컴포넌트 가이드라인 제작 및 적용</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-vial"></i></div>
+                                <p class="task-desc"><strong>QA 및 테스트:</strong> 통합 시나리오 기반의 사용자 테스트(UT) 수행 및 오류 수정</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-card p3">
+                    <div class="phase-marker">
+                        <div class="phase-circle">3</div>
+                        <div class="phase-duration">6개월~</div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-header">
+                            <h3 class="phase-title">Phase 3: 확장 및 고도화 (Expansion)</h3>
+                            <span class="phase-tag">O2O &amp; AI 적용</span>
+                        </div>
+                        <div class="task-grid">
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-store"></i></div>
+                                <p class="task-desc"><strong>키오스크·O2O 연동:</strong> 현장 키오스크와 모바일 앱 간의 데이터 실시간 동기화 구현</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-robot"></i></div>
+                                <p class="task-desc"><strong>AI·개인화 적용:</strong> 고객 행동 데이터 기반의 맞춤형 상품 및 체험 코스 추천 알고리즘 도입</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-route"></i></div>
+                                <p class="task-desc"><strong>시나리오 여정 완성:</strong> 방문 전(예약) → 중(체험) → 후(리뷰)를 연결하는 스토리텔링 콘텐츠 강화</p>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-icon"><i class="fas fa-chart-line"></i></div>
+                                <p class="task-desc"><strong>성과 분석 및 최적화:</strong> 런칭 후 데이터 분석을 통한 UX 지속 개선 및 마케팅 자동화 연동</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 21</div>
+    </div>
+</body>
+</html>

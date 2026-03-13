@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리포트 메타정보</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .text-accent {
+            color: #2E7D32;
+        }
+        .bg-secondary {
+            background-color: #E8F5E9;
+        }
+        .border-accent {
+            border-color: #2E7D32;
+        }
+        .meta-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .meta-icon-wrapper {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.25rem;
+            height: 100%;
+        }
+        .keep-all {
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+        p, span, h1, h2, h3, h4, h5, h6, li, div {
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800 keep-all">리포트 메타정보</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 p-10 overflow-hidden">
+            <div class="grid-container h-full">
+                <!-- Project Info -->
+                <div class="meta-card p-5 border-l-4 border-blue-500">
+                    <div class="meta-icon-wrapper bg-blue-100 text-blue-600">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 keep-all">프로젝트 개요</h3>
+                    <div class="flex-1 overflow-y-auto">
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start">
+                                <span class="font-semibold w-20 flex-shrink-0 text-gray-800 keep-all">목적:</span>
+                                <span class="keep-all">상하농원몰 리뉴얼</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold w-20 flex-shrink-0 text-gray-800 keep-all">인풋 레벨:</span>
+                                <span class="keep-all">Level 4 (심층 분석)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-semibold w-20 flex-shrink-0 text-gray-800 keep-all">분석 일시:</span>
+                                <span class="keep-all">2026-03-12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Target URL -->
+                <div class="meta-card p-5 border-l-4 border-green-500">
+                    <div class="meta-icon-wrapper bg-green-100 text-green-600">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 keep-all">대상 URL &amp; 카테고리</h3>
+                    <div class="flex-1 overflow-y-auto">
+                        <p class="text-sm text-blue-600 font-medium mb-2 truncate hover:underline cursor-pointer">
+                            https://www.sanghafarm.co.kr
+                        </p>
+                        <ul class="space-y-1.5 text-gray-600 text-sm">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-xs"></i>
+                                <span class="keep-all">농원·리조트 통합 플랫폼</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-xs"></i>
+                                <span class="keep-all">농촌형 테마공원</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-xs"></i>
+                                <span class="keep-all">농산물 이커머스</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Target Audience -->
+                <div class="meta-card p-5 border-l-4 border-green-500">
+                    <div class="meta-icon-wrapper bg-green-100 text-green-600">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 keep-all">타겟 고객</h3>
+                    <div class="flex-1 overflow-y-auto">
+                        <div class="mb-3">
+                            <p class="font-bold text-teal-700 text-sm mb-0.5 keep-all">B2C (개인)</p>
+                            <p class="text-gray-600 text-xs leading-snug keep-all">가족 단위 체험·숙박 고객<br>건강·프리미엄 먹거리 관심층</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-teal-700 text-sm mb-0.5 keep-all">B2B (기업/단체)</p>
+                            <p class="text-gray-600 text-xs leading-snug keep-all">단체 예약 (워크샵, 견학)<br>대량 구매 고객</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Model -->
+                <div class="meta-card p-5 border-l-4 border-orange-500 col-span-2">
+                    <div class="meta-icon-wrapper bg-orange-100 text-orange-600">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 keep-all">서비스 모델</h3>
+                    <div class="flex-1 flex items-center justify-around h-full">
+                        <div class="text-center px-2">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center mx-auto mb-2 text-lg">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <p class="font-semibold text-gray-700 text-xs keep-all">농산물·먹거리<br>이커머스</p>
+                        </div>
+                        <div class="h-10 w-px bg-gray-200"></div>
+                        <div class="text-center px-2">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center mx-auto mb-2 text-lg">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <p class="font-semibold text-gray-700 text-xs keep-all">숙박·체험<br>예약</p>
+                        </div>
+                        <div class="h-10 w-px bg-gray-200"></div>
+                        <div class="text-center px-2">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center mx-auto mb-2 text-lg">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <p class="font-semibold text-gray-700 text-xs keep-all">단체·대량<br>구매</p>
+                        </div>
+                        <div class="h-10 w-px bg-gray-200"></div>
+                        <div class="text-center px-2">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center mx-auto mb-2 text-lg">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <p class="font-semibold text-gray-700 text-xs keep-all">멤버십·통합<br>혜택</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benchmarking Targets -->
+                <div class="meta-card p-5 border-l-4 border-red-500">
+                    <div class="meta-icon-wrapper bg-red-100 text-red-600">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 keep-all">벤치마킹 대상 (총 10개)</h3>
+                    <div class="flex-1 flex flex-col justify-center space-y-2">
+                        <div class="flex justify-between items-center bg-red-50 px-3 py-1.5 rounded">
+                            <span class="font-semibold text-gray-700 text-xs keep-all">동종업계</span>
+                            <span class="font-bold text-red-600 bg-white px-2 py-0.5 rounded shadow-sm text-xs keep-all">6개</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 px-3 py-1.5 rounded">
+                            <span class="font-semibold text-gray-600 text-xs keep-all">타 산업</span>
+                            <span class="font-bold text-gray-500 bg-white px-2 py-0.5 rounded shadow-sm text-xs keep-all">2개</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 px-3 py-1.5 rounded">
+                            <span class="font-semibold text-gray-600 text-xs keep-all">디자인 참조</span>
+                            <span class="font-bold text-gray-500 bg-white px-2 py-0.5 rounded shadow-sm text-xs keep-all">2개</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 3</div>
+    </div>
+</body>
+</html>

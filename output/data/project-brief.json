@@ -1,0 +1,148 @@
+{
+  "input_level": "4",
+  "input_summary": "상하농원몰 벤치마킹 리뉴얼 재작성 인풋 — 고객사 지정 벤치마킹 3사 추가, 리포트 구조 변경, CX·CS·고객 여정·O2O·TO-BE 반영",
+  "company": {
+    "name": "상하농원몰",
+    "name_en": "Sangha Farm Mall",
+    "url": "https://www.sanghafarm.co.kr/main.jsp",
+    "description": "농촌형 테마공원·농원 리조트·농산물 이커머스를 겸한 농원·리조트 통합 플랫폼(All-in-One Farm Stay Platform)",
+    "confidence": "high"
+  },
+  "project": {
+    "type": "리뉴얼·재작성",
+    "purpose": "고객사 지정 벤치마킹 업체 추가 및 리포트 구조 변경에 따른 벤치마킹 분석 리포트 재작성",
+    "existing_document": "sangha_farm_benchmarking_report_20260311033847.pdf",
+    "existing_doc_date": "2026-03-11",
+    "confidence": "high"
+  },
+  "core_purpose": "농원·리조트·테마파크·호텔 등 관련 시장 트렌드를 반영한 선제적 고객경험(CX)·CS와 통합 고객 여정 설계, O2O·키오스크를 포함한 TO-BE 제안",
+  "categories": [
+    "농원·리조트 통합 플랫폼",
+    "농촌형 테마공원",
+    "농원 리조트",
+    "농산물 이커머스",
+    "테마파크·호텔 동종업계"
+  ],
+  "target_users": {
+    "B2C": [
+      "가족 단위 체험·숙박 고객",
+      "건강·프리미엄 먹거리 관심층"
+    ],
+    "B2B": [
+      "단체 예약",
+      "대량 구매 고객"
+    ],
+    "confidence": "high"
+  },
+  "service_model": {
+    "revenue_types": [
+      "농산물·먹거리 이커머스",
+      "숙박 예약",
+      "체험 예약",
+      "단체·대량 구매",
+      "멤버십·통합 혜택"
+    ],
+    "confidence": "high"
+  },
+  "features": {
+    "confirmed": [
+      "결제 통합(4개 → 1개)",
+      "One-ID·멤버십 통합",
+      "통합 네비게이션",
+      "통합 장바구니",
+      "통합 예약·주문 조회",
+      "Mobile First·여정 중심 UX"
+    ],
+    "inferred": [
+      "키오스크·온라인-오프라인 연계",
+      "방문 전·방문 중·방문 후 통합 여정",
+      "시나리오(스토리) 기반 고객 여정",
+      "CX·CS 중심 프로세스"
+    ],
+    "confidence": "high"
+  },
+  "pain_points": {
+    "summary": "기존 리포트 도출 Pain Points(PP-1~5) 요약",
+    "items": [
+      { "code": "PP-1", "description": "분리 로그인", "confidence": "high" },
+      { "code": "PP-2", "description": "결제 4개 분리", "confidence": "high" },
+      { "code": "PP-3", "description": "흩어진 네비게이션", "confidence": "high" },
+      { "code": "PP-4", "description": "분리 장바구니", "confidence": "high" },
+      { "code": "PP-5", "description": "흩어진 예약·주문 조회", "confidence": "high" }
+    ]
+  },
+  "benchmark_targets": {
+    "primary": [
+      {
+        "name": "에버랜드",
+        "url": "https://www.everland.com/everland/home/main",
+        "note": "고객사 지정"
+      },
+      {
+        "name": "인스파이어 리조트",
+        "url": "https://www.inspireresorts.com/ko",
+        "note": "추가"
+      },
+      {
+        "name": "파라다이스 호텔",
+        "url": "https://www.p-city.com/",
+        "note": "추가"
+      }
+    ],
+    "reference": "기존 리포트 Direct/Indirect/Inspire 9건 사례 참고 유지 가능, 본 재작성에서는 위 3개를 핵심 대상으로 반영",
+    "confidence": "high"
+  },
+  "design_direction": {
+    "must_reflect": [
+      "고객 경험(CX)·CS 중요",
+      "선제적 고객경험·시나리오(스토리)가 있는 고객 여정 제안",
+      "고객 여정·통합 여정 프로세스 중심 설계",
+      "O2O: 방문 전·방문 중·방문 후, 키오스크 등 온라인-오프라인 연계",
+      "TO-BE 전체 모습 중심 제안(선제적 로드맵·시나리오 포함)"
+    ],
+    "confidence": "high"
+  },
+  "indirect_feature_points": [
+    "테마파크·리조트·호텔의 CX·고객 여정 설계",
+    "O2O·키오스크를 활용한 통합 여정",
+    "통합 예약·결제·멤버십 경험"
+  ],
+  "competitive_hints": "기존 벤치마킹 리포트 9건 사례와의 연계·차별점 정리 가능",
+  "market_context": {
+    "industries": ["농원", "리조트", "테마파크", "호텔"],
+    "trends_to_cover": [
+      "농원·리조트·테마파크·호텔 관련 시장·동종업계 트렌드",
+      "고객 경험(CX)·CS·O2O·통합 여정 트렌드"
+    ],
+    "confidence": "high"
+  },
+  "domestic_project": true,
+  "report_structure": {
+    "order_strict": true,
+    "stages": [
+      {
+        "order": 1,
+        "title": "1단계 — 상하농원몰 현재 사이트 진단",
+        "content": "자사 현황 진단(정량·정성), Pain Points(PP-1~5 등) 요약"
+      },
+      {
+        "order": 2,
+        "title": "2단계 — 시장조사 및 동종업계 트렌드 리포트",
+        "content": "농원·리조트·테마파크·호텔 등 관련 시장·동종업계 트렌드, 고객 경험(CX)·CS·O2O·통합 여정 트렌드 반영"
+      },
+      {
+        "order": 3,
+        "title": "3단계 — 벤치마킹 리포트",
+        "content": "에버랜드, 인스파이어 리조트, 파라다이스 호텔 중심 벤치마킹, 기존 9건 사례와의 연계·차별점 정리 가능"
+      }
+    ],
+    "confidence": "high"
+  },
+  "output_expectations": [
+    "시장조사·동종업계 트렌드 리포트(1차 산출물)",
+    "상하농원몰 벤치마킹 분석 리포트 재작성본(에버랜드·인스파이어 리조트·파라다이스 호텔 포함, TO-BE·고객 여정·O2O·키오스크 반영)"
+  ],
+  "customer_requirements_note": "기술적 커머스뿐 아니라 고객 경험(CX)·CS가 중요하며, 벤치마킹 인사이트·트렌드를 반영한 선제적 고객경험, 시나리오가 있는 고객 여정, 고객 여정·통합 여정 프로세스 중심 설계, O2O(방문 전·중·후, 키오스크), TO-BE 전체 모습 중심 제안을 반드시 반영할 것.",
+  "generated_at": "2026-03-12",
+  "source": "raw-input.txt (context-builder PHASE 0)"
+}

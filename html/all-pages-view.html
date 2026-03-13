@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 페이지 순서 보기 - 상하농원몰 벤치마킹 리포트</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background: #1f2937; color: #e5e7eb; }
+        .page-header { background: #111827; padding: 1rem 2rem; border-bottom: 2px solid #2E7D32; position: sticky; top: 0; z-index: 10; }
+        .page-header h1 { font-size: 1.25rem; font-weight: 700; margin: 0; }
+        .page-header p { font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0; }
+        .list { max-width: 1400px; margin: 0 auto; padding: 1.5rem; }
+        .slide-item { margin-bottom: 2rem; }
+        .slide-item .label { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .slide-item .num { width: 2rem; height: 2rem; border-radius: 0.5rem; background: #2E7D32; color: white; font-weight: 700; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .slide-item .title { font-weight: 600; font-size: 1rem; }
+        .slide-item .link { font-size: 0.75rem; color: #6b7280; margin-left: auto; }
+        .slide-item .link a { color: #60a5fa; text-decoration: none; }
+        .slide-item .link a:hover { text-decoration: underline; }
+        .preview-wrap { width: 640px; height: 360px; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); background: #fff; }
+        .preview-wrap iframe { width: 1280px; height: 720px; border: 0; transform: scale(0.5); transform-origin: 0 0; pointer-events: none; }
+        .preview-wrap.clickable iframe { pointer-events: auto; }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>상하농원몰 벤치마킹 분석 리포트 · 전체 페이지 순서</h1>
+        <p>아래에서 슬라이드 순서대로 한눈에 확인할 수 있습니다. 미리보기를 클릭하면 해당 페이지로 이동합니다.</p>
+    </div>
+    <div class="list">
+        <div class="slide-item">
+            <div class="label"><span class="num">1</span><span class="title">표지 · 벤치마킹 분석 리포트</span><span class="link"><a href="01-benchmark-report-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="01-benchmark-report-page.html" title="표지"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">2</span><span class="title">목차</span><span class="link"><a href="00-index.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="00-index.html" title="목차"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">3</span><span class="title">리포트 메타정보</span><span class="link"><a href="02-report-meta-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="02-report-meta-page.html" title="리포트 메타정보"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">4</span><span class="title">분석 목적 및 범위</span><span class="link"><a href="03-analysis-purpose-scope-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="03-analysis-purpose-scope-page.html" title="분석 목적 및 범위"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">5</span><span class="title">섹션 1 · 현재 사이트 진단</span><span class="link"><a href="00a-section1.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="00a-section1.html" title="섹션 1"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">6</span><span class="title">자사 사이트 현황 진단</span><span class="link"><a href="04-site-diagnosis-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="04-site-diagnosis-page.html" title="자사 사이트 현황 진단"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">7</span><span class="title">주요 문제점 5개</span><span class="link"><a href="05-pain-points-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="05-pain-points-page.html" title="주요 문제점 5개"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">8</span><span class="title">섹션 2 · 시장·트렌드 조사</span><span class="link"><a href="00b-section2.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="00b-section2.html" title="섹션 2"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">9</span><span class="title">시장·동종업계 트렌드</span><span class="link"><a href="06-market-trends-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="06-market-trends-page.html" title="시장·동종업계 트렌드"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">10</span><span class="title">트렌드를 통한 적용점</span><span class="link"><a href="07-cx-o2o-trends-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="07-cx-o2o-trends-page.html" title="트렌드를 통한 적용점"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">11</span><span class="title">섹션 3 · 벤치마킹 &amp; 전략</span><span class="link"><a href="00c-section3.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="00c-section3.html" title="섹션 3"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">12</span><span class="title">벤치마킹 대상 개요</span><span class="link"><a href="08-benchmark-overview-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="08-benchmark-overview-page.html" title="벤치마킹 대상 개요"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">13</span><span class="title">에버랜드 상세 분석</span><span class="link"><a href="09-d1-everland-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="09-d1-everland-page.html" title="에버랜드"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">14</span><span class="title">인스파이어 리조트 상세 분석</span><span class="link"><a href="10-d2-inspire-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="10-d2-inspire-page.html" title="인스파이어"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">15</span><span class="title">파라다이스 호텔 상세 분석</span><span class="link"><a href="11-d3-paradise-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="11-d3-paradise-page.html" title="파라다이스"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">16</span><span class="title">기타 동종업계 경쟁사 분석</span><span class="link"><a href="12-direct-others-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="12-direct-others-page.html" title="기타 동종업계"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">17</span><span class="title">Indirect &amp; Inspire 핵심 포인트</span><span class="link"><a href="13-indirect-inspire-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="13-indirect-inspire-page.html" title="Indirect & Inspire"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">18</span><span class="title">7개 영역 통합 비교 매트릭스</span><span class="link"><a href="14-matrix-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="14-matrix-page.html" title="매트릭스"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">19</span><span class="title">핵심 인사이트</span><span class="link"><a href="15-insight-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="15-insight-page.html" title="핵심 인사이트"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">20</span><span class="title">권고안 및 실행 전략 (1/2)</span><span class="link"><a href="16-recommendation-roadmap-1-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="16-recommendation-roadmap-1-page.html" title="권고안 1/2"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">21</span><span class="title">권고안 및 실행 전략 (2/2)</span><span class="link"><a href="17-recommendation-roadmap-2-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="17-recommendation-roadmap-2-page.html" title="권고안 2/2"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">22</span><span class="title">원페이지 요약</span><span class="link"><a href="18-summary-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="18-summary-page.html" title="원페이지 요약"></iframe></div>
+        </div>
+        <div class="slide-item">
+            <div class="label"><span class="num">23</span><span class="title">End of Document</span><span class="link"><a href="19-eod-page.html" target="_blank">열기</a></span></div>
+            <div class="preview-wrap clickable"><iframe src="19-eod-page.html" title="EOD"></iframe></div>
+        </div>
+    </div>
+</body>
+</html>

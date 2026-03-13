@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 목적 및 범위</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            word-break: keep-all;
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .text-accent {
+            color: #2E7D32;
+        }
+        .bg-accent-light {
+            background-color: #E8F5E9;
+        }
+        .border-accent {
+            border-color: #2E7D32;
+        }
+        .framework-item {
+            transition: all 0.2s ease;
+        }
+        .framework-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">분석 목적 및 범위</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex p-8 gap-8 bg-gray-50 overflow-hidden">
+            <!-- Left Column: Background & Criteria -->
+            <div class="flex flex-col gap-4 w-3/5 h-full overflow-hidden">
+                <!-- Analysis Background -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex-shrink-0">
+                    <div class="flex items-center gap-3 mb-3 border-b pb-2 border-gray-100">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-gray-800">분석 배경</h2>
+                    </div>
+                    <div class="space-y-3 text-gray-600 leading-snug text-xs">
+                        <p>
+                            <span class="font-bold text-gray-800">All-in-One Farm Stay 플랫폼 고도화:</span>
+                            상하농원몰은 농촌형 테마공원, 농원 리조트, 농산물 이커머스를 결합한 통합 플랫폼입니다. 리뉴얼을 통해 농원·리조트·테마파크·호텔 동종업계 트렌드를 반영하고자 합니다.
+                        </p>
+                        <p>
+                            <span class="font-bold text-gray-800">통합 고객 경험(CX) 및 여정 설계:</span>
+                            단순한 커머스 기능 개선을 넘어, <span class="text-blue-600 font-semibold">방문 전·중·후의 시나리오 기반 통합 여정</span>을 설계합니다. 예약·결제·멤버십 경험을 개선하고, O2O·키오스크 등 온·오프라인 연계(Digital Touchpoint)를 강화하는 것이 핵심 목표입니다.
+                        </p>
+                        <p>
+                            <span class="font-bold text-gray-800">벤치마킹 대상 확장:</span>
+                            고객사 지정 업체(에버랜드, 인스파이어, 파라다이스)를 포함하여 동종업계 선도 기업의 전략과 CX 구현 방식을 심층 분석합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Selection Criteria -->
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex-1 overflow-hidden flex flex-col">
+                    <div class="flex items-center gap-3 mb-3 border-b pb-2 border-gray-100 flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-gray-800">분석 대상 선정 기준</h2>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 flex-1">
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex flex-col justify-center">
+                            <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2 text-xs">
+                                <span class="w-2 h-2 rounded-full bg-red-500"></span> 동종업계
+                            </h3>
+                            <p class="text-xs text-gray-500 leading-tight">
+                                동종업계(테마파크/리조트) 내 트래픽·규모·통합 예약 수준 우수 업체 및 고객사 지정 대상
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex flex-col justify-center">
+                            <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2 text-xs">
+                                <span class="w-2 h-2 rounded-full bg-blue-500"></span> 타 산업
+                            </h3>
+                            <p class="text-xs text-gray-500 leading-tight">
+                                타 산업에서 CX·고객 여정 설계, O2O·키오스크 통합 기능을 성공적으로 구현한 사례
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex flex-col justify-center">
+                            <h3 class="font-bold text-gray-800 mb-2 flex items-center gap-2 text-xs">
+                                <span class="w-2 h-2 rounded-full bg-teal-500"></span> 디자인 참조
+                            </h3>
+                            <p class="text-xs text-gray-500 leading-tight">
+                                수상 이력(Awwwards 등) 및 모바일 퍼스트·가족형 시나리오 등 디자인 강점 보유
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Analysis Framework -->
+            <div class="w-2/5 flex flex-col h-full overflow-hidden">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col overflow-hidden">
+                    <div class="flex items-center gap-3 mb-4 border-b pb-2 border-gray-100 flex-shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-gray-800">분석 프레임워크 (7개 영역)</h2>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between gap-2 overflow-y-auto pr-1">
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-red-500 text-base flex-shrink-0">
+                                <i class="fas fa-chess"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">전략 / 포지셔닝</h4>
+                                <p class="text-[10px] text-gray-500">서비스 차별화, 타겟 정합성</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-orange-500 text-base flex-shrink-0">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">IA / 네비게이션</h4>
+                                <p class="text-[10px] text-gray-500">정보 접근성, 통합 여정 연계 구조</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-yellow-500 text-base flex-shrink-0">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">UX / UI 디자인</h4>
+                                <p class="text-[10px] text-gray-500">모바일 퍼스트, 여정 중심 경험</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-green-500 text-base flex-shrink-0">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">콘텐츠 전략</h4>
+                                <p class="text-[10px] text-gray-500">시나리오 및 스토리텔링 반영</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-blue-500 text-base flex-shrink-0">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">기술 / 퍼포먼스</h4>
+                                <p class="text-[10px] text-gray-500">시스템 안정성, 로딩 속도</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-indigo-500 text-base flex-shrink-0">
+                                <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">전환 설계</h4>
+                                <p class="text-[10px] text-gray-500">예약·결제·조회 전환율 최적화</p>
+                            </div>
+                        </div>
+                        <div class="framework-item flex items-center gap-3 p-2 rounded-lg bg-gray-50 border border-gray-100">
+                            <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-teal-500 text-base flex-shrink-0">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-xs">AI / 개인화</h4>
+                                <p class="text-[10px] text-gray-500">맞춤 추천, 통합 멤버십 혜택</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 4</div>
+    </div>
+</body>
+</html>

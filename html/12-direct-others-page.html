@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 Direct 경쟁사 분석</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .meta-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid;
+            padding: 0;
+            overflow: hidden;
+        }
+        .meta-card-content {
+            padding: 1rem 1.25rem 1.25rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+        }
+        .meta-image-wrapper {
+            height: 160px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .meta-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .meta-icon-wrapper {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            height: 100%;
+        }
+        .tag-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.15rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+        .overflow-y-auto::-webkit-scrollbar { width: 4px; }
+        .overflow-y-auto::-webkit-scrollbar-track { background: #f1f1f1; }
+        .overflow-y-auto::-webkit-scrollbar-thumb { background: #cbd5e0; border-radius: 2px; }
+        .overflow-y-auto::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+        .keep-all { word-break: keep-all; word-wrap: break-word; }
+        p, span, h1, h2, h3, h4, h5, h6, li, div, strong { word-break: keep-all; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800 keep-all">기타 동종업계 경쟁사 분석</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 p-8 overflow-hidden">
+            <div class="grid-container h-full">
+                <!-- D-4 롯데리조트 -->
+                <div class="meta-card border-red-600">
+                    <div class="meta-image-wrapper">
+                        <img alt="롯데리조트" class="meta-image" src="assets/롯데리조트.png">
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md z-10 keep-all">D-4</div>
+                    </div>
+                    <div class="meta-card-content">
+                        <div class="flex items-center mb-2">
+                            <div class="meta-icon-wrapper bg-red-100 text-red-600">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 leading-tight keep-all">롯데리조트</h3>
+                                <p class="text-xs text-gray-500 font-medium keep-all">통합 멤버십 및 L.POINT 연동 강점</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 overflow-y-auto mb-3 pr-1">
+                            <h4 class="text-xs font-bold text-gray-700 mb-2 border-b pb-1 keep-all">핵심 기능 및 특징</h4>
+                            <ul class="space-y-1.5 text-gray-600 text-xs">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-red-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">통합 멤버십:</strong> 객실·테마파크·쇼핑 혜택을 하나의 멤버십으로 통합 관리</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-red-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">One-Stop 예약:</strong> 객실, 패키지, 테마파크 이용권을 단일 플로우에서 예약</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-red-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">L.POINT 연동:</strong> 대규모 제휴 포인트 시스템 연동으로 고객 Lock-in 유도</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-2.5 mb-2">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase mb-1 keep-all">Benchmarking Point</h4>
+                            <div class="flex flex-wrap">
+                                <span class="tag-badge bg-red-100 text-red-700 keep-all">PP-1 분리 로그인 해결</span>
+                                <span class="tag-badge bg-red-100 text-red-700 keep-all">PP-2 결제 통합</span>
+                                <span class="tag-badge bg-red-100 text-red-700 keep-all">PP-5 통합 조회</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-400 mt-auto flex items-center pt-1 border-t border-gray-100">
+                            <i class="fas fa-exclamation-circle mr-1.5 text-red-400"></i>
+                            <p class="keep-all">이커머스·장바구니 기능은 보완 필요</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D-5 오크밸리 -->
+                <div class="meta-card border-green-600">
+                    <div class="meta-image-wrapper">
+                        <img alt="오크밸리" class="meta-image" src="assets/오크밸리.png">
+                        <div class="absolute top-3 right-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md z-10 keep-all">D-5</div>
+                    </div>
+                    <div class="meta-card-content">
+                        <div class="flex items-center mb-2">
+                            <div class="meta-icon-wrapper bg-green-100 text-green-600">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 leading-tight keep-all">오크밸리</h3>
+                                <p class="text-xs text-gray-500 font-medium keep-all">올인클루시브 &amp; 웰니스 복합 리조트</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 overflow-y-auto mb-3 pr-1">
+                            <h4 class="text-xs font-bold text-gray-700 mb-2 border-b pb-1 keep-all">핵심 기능 및 특징</h4>
+                            <ul class="space-y-1.5 text-gray-600 text-xs">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">올인클루시브 패키지:</strong> 객실+수영장+식사+테마파크를 묶은 통합 상품 운영</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">통합 온라인 예약:</strong> 별도 사이트 이동 없이 숙박과 부대시설 동시 예약</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">웰니스 콘텐츠:</strong> 대규모 자연 단지를 활용한 힐링/체험 프로그램 강점</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-2.5 mb-2">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase mb-1 keep-all">Benchmarking Point</h4>
+                            <div class="flex flex-wrap">
+                                <span class="tag-badge bg-green-100 text-green-700 keep-all">PP-2 결제 프로세스</span>
+                                <span class="tag-badge bg-green-100 text-green-700 keep-all">PP-4 통합 패키지화</span>
+                                <span class="tag-badge bg-green-100 text-green-700 keep-all">PP-5 예약 조회</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-400 mt-auto flex items-center pt-1 border-t border-gray-100">
+                            <i class="fas fa-exclamation-circle mr-1.5 text-green-500"></i>
+                            <p class="keep-all">복합 리조트 모델의 성공적 통합 사례</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D-6 켄싱턴호텔앤리조트 -->
+                <div class="meta-card border-indigo-600">
+                    <div class="meta-image-wrapper">
+                        <img alt="켄싱턴리조트" class="meta-image" src="assets/켄싱턴.png">
+                        <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md z-10 keep-all">D-6</div>
+                    </div>
+                    <div class="meta-card-content">
+                        <div class="flex items-center mb-2">
+                            <div class="meta-icon-wrapper bg-indigo-100 text-indigo-600">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 leading-tight keep-all">켄싱턴리조트</h3>
+                                <p class="text-xs text-gray-500 font-medium keep-all">가족 친화적 콘텐츠 &amp; 농장 체험 연계</p>
+                            </div>
+                        </div>
+                        <div class="flex-1 overflow-y-auto mb-3 pr-1">
+                            <h4 class="text-xs font-bold text-gray-700 mb-2 border-b pb-1 keep-all">핵심 기능 및 특징</h4>
+                            <ul class="space-y-1.5 text-gray-600 text-xs">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-indigo-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">농장 체험 패키지:</strong> 딸기 농장 등 지역 농원과 숙박을 연계한 상품 (팜투어)</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-indigo-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">YES KIDS:</strong> 키즈 라운지, 키즈 전용 혜택 등 가족 타겟 로열티 프로그램</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-indigo-500 mt-0.5 mr-1.5 text-xs flex-shrink-0"></i>
+                                    <p class="keep-all"><strong class="keep-all">켄싱턴 리워즈:</strong> 포인트 적립 및 회원 전용 혜택(쿠폰) 제공</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-2.5 mb-2">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase mb-1 keep-all">Benchmarking Point</h4>
+                            <div class="flex flex-wrap">
+                                <span class="tag-badge bg-indigo-100 text-indigo-700 keep-all">PP-3 고객 여정 설계</span>
+                                <span class="tag-badge bg-indigo-100 text-indigo-700 keep-all">농원+숙박 시나리오</span>
+                                <span class="tag-badge bg-indigo-100 text-indigo-700 keep-all">가족 타겟팅</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-400 mt-auto flex items-center pt-1 border-t border-gray-100">
+                            <i class="fas fa-exclamation-circle mr-1.5 text-indigo-400"></i>
+                            <p class="keep-all">이커머스 통합 결제 기능 확장 필요</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 16</div>
+    </div>
+</body>
+</html>

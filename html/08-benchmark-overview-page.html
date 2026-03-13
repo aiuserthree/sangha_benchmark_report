@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벤치마킹 대상 개요</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            max-width: 100%;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            word-break: keep-all;
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid #E5E7EB;
+            flex-shrink: 0;
+        }
+        .card-grid {
+            display: grid;
+            gap: 0.4rem;
+            height: 100%;
+            min-height: 0;
+        }
+        .direct-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            align-content: center;
+        }
+        .bench-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid #E5E7EB;
+            padding: 0.4rem;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-self: start;
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+        .bench-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        .card-tag {
+            font-size: 0.55rem;
+            padding: 0.05rem 0.35rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        .tag-direct { background-color: #FFEBEE; color: #C62828; }
+        .tag-indirect { background-color: #E3F2FD; color: #1565C0; }
+        .tag-inspire { background-color: #CCFBF1; color: #0D9488; }
+
+        .img-container {
+            width: 100%;
+            height: 108px;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            margin-bottom: 0.25rem;
+            background-color: #f3f4f6;
+            flex-shrink: 0;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-container.h-16 { height: 88px; }
+
+        .bench-card h3 { font-size: 0.875rem; line-height: 1.25; margin: 0; }
+        .bench-card p { margin: 0; font-size: 0.7rem; line-height: 1.35; }
+        .bench-card .card-desc { padding-top: 0.35rem; margin-top: 0.35rem; border-top: 1px solid #f3f4f6; }
+        .text-xs { font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">벤치마킹 대상 개요</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 min-h-0 bg-gray-50 px-6 py-4 overflow-hidden flex gap-6 items-center justify-center">
+            <div class="flex gap-6 w-full max-h-full items-center justify-center" style="transform: translateY(-28px);">
+            <!-- Left Column: Direct Competitors (6) -->
+            <div class="w-3/5 flex flex-col min-h-0 justify-center">
+                <div class="section-header border-b-2 border-red-200 flex-shrink-0">
+                    <div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center mr-2">
+                        <i class="fas fa-bullseye text-sm"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-gray-800">동종업계 <span class="text-sm font-normal text-gray-500 ml-2">(6개)</span></h2>
+                </div>
+                <div class="card-grid direct-grid flex-1">
+                    <div class="bench-card border-l-4 border-red-500">
+                        <div class="img-container">
+                            <img alt="에버랜드" src="assets/에버랜드.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 1</span>
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">에버랜드</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-red-400 mr-1"></i>가든패스 &amp; 통합 앱<br>
+                                <i class="fas fa-check text-red-400 mr-1"></i>예약·대기 원스톱
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bench-card border-l-4 border-red-500">
+                        <div class="img-container">
+                            <img alt="인스파이어" src="assets/인스파이어.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 2</span>
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">인스파이어</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-red-400 mr-1"></i>호텔·엔터 통합<br>
+                                <i class="fas fa-check text-red-400 mr-1"></i>대규모 고객 여정
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bench-card border-l-4 border-red-500">
+                        <div class="img-container">
+                            <img alt="파라다이스" src="assets/파라다이스.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 3</span>
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">파라다이스</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-red-400 mr-1"></i>패키지 &amp; 멤버십<br>
+                                <i class="fas fa-check text-red-400 mr-1"></i>O2O 셔틀 연동
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bench-card">
+                        <div class="img-container">
+                            <img alt="롯데리조트" src="assets/롯데리조트.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 4</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">롯데리조트</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-gray-400 mr-1"></i>객실/이용권 통합<br>
+                                <i class="fas fa-check text-gray-400 mr-1"></i>L.POINT 멤버십
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bench-card">
+                        <div class="img-container">
+                            <img alt="오크밸리" src="assets/오크밸리.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 5</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">오크밸리</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-gray-400 mr-1"></i>올인클루시브<br>
+                                <i class="fas fa-check text-gray-400 mr-1"></i>웰니스 콘텐츠
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bench-card">
+                        <div class="img-container">
+                            <img alt="켄싱턴" src="assets/켄싱턴.png">
+                        </div>
+                        <div class="flex justify-between items-start mb-0.5">
+                            <span class="card-tag tag-direct">동종 6</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-0.5">켄싱턴</h3>
+                        <div class="card-desc">
+                            <p class="text-gray-600">
+                                <i class="fas fa-check text-gray-400 mr-1"></i>농장 체험 패키지<br>
+                                <i class="fas fa-check text-gray-400 mr-1"></i>YES KIDS 타겟팅
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Indirect & Inspire (4) -->
+            <div class="w-2/5 flex flex-col min-h-0 gap-4 justify-center">
+                <!-- Indirect -->
+                <div class="flex flex-col flex-shrink-0">
+                    <div class="section-header border-b-2 border-blue-200">
+                        <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-2">
+                            <i class="fas fa-random text-sm"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-gray-800">타 산업 <span class="text-sm font-normal text-gray-500 ml-2">(기능 2개)</span></h2>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bench-card border-l-4 border-blue-500">
+                            <div class="img-container h-16">
+                                <img alt="디즈니랜드" src="assets/디즈니랜드.png">
+                            </div>
+                            <div class="flex justify-between items-start mb-0.5">
+                                <span class="card-tag tag-indirect">타산업 1</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-0.5">디즈니랜드</h3>
+                            <div class="card-desc">
+                                <p class="text-gray-600">
+                                    <i class="fas fa-check text-blue-400 mr-1"></i>앱 통합 여정<br>
+                                    <i class="fas fa-check text-blue-400 mr-1"></i>대기/주문 디지털
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bench-card border-l-4 border-blue-500">
+                            <div class="img-container h-16">
+                                <img alt="맥도날드" src="assets/맥도날드.png">
+                            </div>
+                            <div class="flex justify-between items-start mb-0.5">
+                                <span class="card-tag tag-indirect">타산업 2</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-0.5">맥도날드</h3>
+                            <div class="card-desc">
+                                <p class="text-gray-600">
+                                    <i class="fas fa-check text-blue-400 mr-1"></i>One-ID 연동<br>
+                                    <i class="fas fa-check text-blue-400 mr-1"></i>키오스크 최적화
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inspire -->
+                <div class="flex flex-col flex-shrink-0">
+                    <div class="section-header border-b-2 border-teal-200">
+                        <div class="w-7 h-7 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mr-2">
+                            <i class="fas fa-lightbulb text-sm"></i>
+                        </div>
+                        <h2 class="text-lg font-bold text-gray-800">디자인 참조 <span class="text-sm font-normal text-gray-500 ml-2">(2개)</span></h2>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bench-card border-l-4 border-teal-500">
+                            <div class="img-container h-16">
+                                <img alt="Great Wolf" src="assets/great%20wolf.png">
+                            </div>
+                            <div class="flex justify-between items-start mb-0.5">
+                                <span class="card-tag tag-inspire">수상 참조</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-0.5">Great Wolf</h3>
+                            <div class="card-desc">
+                                <p class="text-gray-600">
+                                    <i class="fas fa-check text-teal-400 mr-1"></i>Mobile-First<br>
+                                    <i class="fas fa-check text-teal-400 mr-1"></i>가족 시나리오 UI
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bench-card border-l-4 border-teal-500">
+                            <div class="img-container h-16">
+                                <img alt="카펠라 양양" src="assets/카펠라%20양양.png">
+                            </div>
+                            <div class="flex justify-between items-start mb-0.5">
+                                <span class="card-tag tag-inspire">디자인 참조</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-0.5">카펠라 양양</h3>
+                            <div class="card-desc">
+                                <p class="text-gray-600">
+                                    <i class="fas fa-check text-teal-400 mr-1"></i>자연 친화적 톤<br>
+                                    <i class="fas fa-check text-teal-400 mr-1"></i>GDWEB Winner
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* 상하농원몰 벤치마킹 리포트 공통 스타일 */
+/* 폰트: 대제목 22pt, 중제목 18pt, 소제목 14pt, 본문 12pt, 주석 10pt */
+/* 상하농원 포인트 컬러 #2E7D32 (5~10%), 저채도 2~3색. 보라색 미사용 */
+
+:root {
+    --sangha-green: #2E7D32;
+    --sangha-green-header: #4CAF50; /* 상단 바용 연한 녹색 (로고 가독) */
+    --sangha-green-light: #E8F5E9;
+    --sangha-green-bg: rgba(46, 125, 50, 0.08);
+    --text-dark: #1F2937;
+    --text-body: #4B5563;
+    --text-caption: #6B7280;
+    --font-title-lg: 22pt;   /* 29.33px */
+    --font-title-md: 18pt;   /* 24px */
+    --font-title-sm: 14pt;   /* 18.67px */
+    --font-body: 12pt;       /* 16px */
+    --font-caption: 10pt;    /* 13.33px */
+    --line-tight: 1.2;
+    --line-normal: 1.3;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: var(--font-body);
+    line-height: var(--line-normal);
+    color: var(--text-body);
+    word-break: keep-all;
+}
+
+.slide-container .report-title-lg { font-size: var(--font-title-lg); font-weight: 800; line-height: var(--line-tight); color: var(--text-dark); }
+.slide-container .report-title-md { font-size: var(--font-title-md); font-weight: 700; line-height: var(--line-tight); color: var(--text-dark); }
+.slide-container .report-title-sm { font-size: var(--font-title-sm); font-weight: 700; line-height: var(--line-tight); color: var(--text-dark); }
+.slide-container .report-body { font-size: var(--font-body); line-height: var(--line-normal); color: var(--text-body); }
+.slide-container .report-caption { font-size: var(--font-caption); line-height: var(--line-normal); color: var(--text-caption); }
+
+.header-bg { background-color: var(--sangha-green-header) !important; }
+.text-accent { color: var(--sangha-green) !important; }
+.bg-accent-light { background-color: var(--sangha-green-light) !important; }
+
+/* 보라색 제거 → 녹색/청록 계열로 대체 */
+.purple-replace { color: #0D9488 !important; } /* teal */
+.bg-purple-replace { background-color: #CCFBF1 !important; }
+.border-purple-replace { border-color: #0D9488 !important; }
+
+.page-footer {
+    position: absolute;
+    bottom: 12px;
+    right: 24px;
+    font-size: var(--font-caption);
+    color: var(--text-caption);
+}
+.report-header .logo-area { font-weight: 700; }
+.report-header .logo-ax { opacity: 0.9; font-size: 0.9em; margin-left: 1rem; }
+
+/* 헤더 로고: 상하농원 작게, ibank AX 크게 */
+.header-logo { height: 28px; width: auto; object-fit: contain; display: block; }
+.header-logo.header-logo-ax { height: 44px; }
+.header-logo.invert { filter: brightness(0) invert(1); }
+/* ibank AX: 흰색 배경만 제거, 로고(글자)는 그대로 노출 */
+.header-logo.no-bg { mix-blend-mode: multiply; }
+.header-logos { display: flex; align-items: center; gap: 1rem; }
+
+/* 목차와 동일한 페이지 헤더 형태 (흰 배경 + 하단 녹색 보더) */
+.toc-header { background: none !important; flex-shrink: 0; border-bottom: 2px solid #2E7D32; }

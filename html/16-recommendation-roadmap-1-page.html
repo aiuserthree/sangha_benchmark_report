@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>권고안 및 실행 전략 (상)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 0.25rem;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 0.6rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E5E7EB;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 10;
+        }
+        .priority-box {
+            border-radius: 0.75rem;
+            padding: 0.6rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .p-must { background-color: #ECFDF5; border: 1px solid #10B981; }
+        .p-nice { background-color: #EFF6FF; border: 1px solid #3B82F6; }
+        .p-future { background-color: #F5F3FF; border: 1px solid #8B5CF6; }
+        .p-title {
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+            padding-bottom: 0.4rem;
+        }
+        .p-must .p-title { color: #065F46; }
+        .p-nice .p-title { color: #1E40AF; }
+        .p-future .p-title { color: #5B21B6; }
+        .p-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+            color: #4B5563;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            justify-content: space-evenly;
+        }
+        .p-list li {
+            padding-left: 1.25rem;
+            position: relative;
+            line-height: 1.35;
+            word-break: keep-all;
+        }
+        .p-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            position: absolute;
+            left: 0;
+            font-weight: 900;
+            font-size: 0.8rem;
+            top: 0.2rem;
+        }
+        .p-must .p-list li::before { color: #10B981; }
+        .p-nice .p-list li::before { color: #3B82F6; }
+        .p-future .p-list li::before { color: #8B5CF6; }
+        .strategy-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.5rem;
+            background-color: #F9FAFB;
+            border-radius: 0.5rem;
+            border: 1px solid #E5E7EB;
+            margin-bottom: 0.3rem;
+            transition: transform 0.2s;
+        }
+        .strategy-item:last-child { margin-bottom: 0; }
+        .strategy-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        .strategy-ts .strategy-icon { background-color: #D1FAE5; color: #047857; }
+        .strategy-ws .strategy-icon { background-color: #DBEAFE; color: #1E40AF; }
+        .strategy-lf .strategy-icon { background-color: #EDE9FE; color: #6D28D9; }
+        .strategy-content { flex: 1; }
+        .strategy-title { font-weight: 700; color: #111827; font-size: 0.95rem; margin-bottom: 0; }
+        .strategy-desc { font-size: 0.85rem; color: #4B5563; line-height: 1.3; word-break: keep-all; }
+        .design-box {
+            height: 100%;
+            border-radius: 0.75rem;
+            padding: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .design-r1 { background-color: #F5F3FF; border: 1px solid #DDD6FE; }
+        .design-r2 { background-color: #ECFDF5; border: 1px solid #A7F3D0; }
+        .design-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+        .design-r1 .design-icon { color: #7C3AED; }
+        .design-r2 .design-icon { color: #059669; }
+        .design-title { font-weight: 800; font-size: 0.95rem; margin-bottom: 0.2rem; }
+        .design-r1 .design-title { color: #5B21B6; }
+        .design-r2 .design-title { color: #065F46; }
+        .design-desc { font-size: 0.85rem; color: #4B5563; line-height: 1.35; word-break: keep-all; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">권고안 및 실행 전략 (1/2)</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 p-8 overflow-hidden flex flex-col h-full">
+            <!-- Top Section: Concept & Design -->
+            <div class="grid grid-cols-2 gap-4 h-[35%] mb-[3%] z-10 shrink-0">
+                <div class="section-card">
+                    <h2 class="section-title">
+                        <i class="fas fa-compass text-green-600"></i> 컨셉 방향 (Strategic Direction)
+                    </h2>
+                    <div class="flex flex-col justify-between flex-grow pt-1">
+                        <div class="strategy-item strategy-ts">
+                            <div class="strategy-icon">TS</div>
+                            <div class="strategy-content">
+                                <p class="strategy-title">필수 경쟁력 확보</p>
+                                <p class="strategy-desc">기본적인 통합 기능(One-ID, 예약, 결제)을 완비하여 사용자 불편 해소</p>
+                            </div>
+                        </div>
+                        <div class="strategy-item strategy-ws">
+                            <div class="strategy-icon">WS</div>
+                            <div class="strategy-content">
+                                <p class="strategy-title">차별화 기회 영역</p>
+                                <p class="strategy-desc">O2O 연결성 및 시나리오 기반 여정으로 독자적 가치 창출</p>
+                            </div>
+                        </div>
+                        <div class="strategy-item strategy-lf">
+                            <div class="strategy-icon">LF</div>
+                            <div class="strategy-content">
+                                <p class="strategy-title">단계적 추월 전략</p>
+                                <p class="strategy-desc">정면 경쟁 대신 '밀도 높은 체험'과 '연결성'으로 우회 침투 전략</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card">
+                    <h2 class="section-title">
+                        <i class="fas fa-paint-brush text-teal-600"></i> 디자인 전략
+                    </h2>
+                    <div class="grid grid-cols-2 gap-4 h-full pt-1">
+                        <div class="design-box design-r1">
+                            <div class="design-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <p class="design-title">모바일 퍼스트</p>
+                            <p class="design-desc">가족 시나리오 기반의<br>직관적 네비게이션 설계</p>
+                        </div>
+                        <div class="design-box design-r2">
+                            <div class="design-icon"><i class="fas fa-leaf"></i></div>
+                            <p class="design-title">자연 비주얼</p>
+                            <p class="design-desc">컬러·타이포·여백을 활용한<br>프리미엄 농원 무드 연출</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Feature Priorities -->
+            <div class="h-[62%] z-10 flex-grow">
+                <div class="section-card">
+                    <h2 class="section-title mb-2">
+                        <i class="fas fa-sort-amount-down text-blue-600"></i> 기능 우선순위 (Prioritization)
+                    </h2>
+                    <div class="grid grid-cols-3 gap-4 flex-grow h-full overflow-hidden">
+                        <div class="priority-box p-must shadow-sm">
+                            <div class="p-title">
+                                <span>필수</span>
+                                <span class="text-xs bg-white px-2 py-0.5 rounded-full border border-green-200 shadow-sm text-green-700">필수 (4건)</span>
+                            </div>
+                            <ul class="p-list">
+                                <li><strong>One-ID:</strong> 통합 로그인 체계 구축</li>
+                                <li><strong>결제 통합:</strong> 4개 분리된 결제 수단 단일화</li>
+                                <li><strong>통합 조회:</strong> 예약/주문 내역 일원화</li>
+                                <li><strong>통합 장바구니:</strong> 예약+쇼핑 동시 결제</li>
+                            </ul>
+                        </div>
+                        <div class="priority-box p-nice shadow-sm">
+                            <div class="p-title">
+                                <span>권장</span>
+                                <span class="text-xs bg-white px-2 py-0.5 rounded-full border border-blue-200 shadow-sm text-blue-700">권장</span>
+                            </div>
+                            <ul class="p-list">
+                                <li><strong>키오스크·O2O:</strong> 현장 연계 기능 확장</li>
+                                <li><strong>시나리오 여정:</strong> 방문 전/중/후 스토리텔링</li>
+                                <li><strong>디자인 고도화:</strong> 마이크로 인터랙션 적용</li>
+                            </ul>
+                        </div>
+                        <div class="priority-box p-future shadow-sm">
+                            <div class="p-title">
+                                <span>예정</span>
+                                <span class="text-xs bg-white px-2 py-0.5 rounded-full border border-teal-200 shadow-sm text-teal-700">예정</span>
+                            </div>
+                            <ul class="p-list">
+                                <li><strong>AI·개인화:</strong> 맞춤형 상품/체험 추천</li>
+                                <li><strong>글로벌 확장:</strong> 다국어 지원 확대</li>
+                                <li><strong>커뮤니티:</strong> 유저 리뷰 및 소통 강화</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 20</div>
+    </div>
+</body>
+</html>

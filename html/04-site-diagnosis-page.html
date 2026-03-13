@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자사 사이트 현황 진단</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            max-width: 100%;
+            height: 720px;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            word-break: keep-all;
+        }
+        .header-bg {
+            background-color: #4CAF50;
+        }
+        .text-accent {
+            color: #2E7D32;
+        }
+        .bg-accent-light {
+            background-color: #E8F5E9;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .diagnosis-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .diagnosis-card:hover {
+            transform: translateY(-2px);
+        }
+        ul li {
+            margin-bottom: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="toc-header px-10 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">자사 사이트 현황 진단</h1>
+            <div class="header-logos">
+                <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                <span class="border-l border-gray-300 h-4"></span>
+                <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax no-bg">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex px-10 py-6 gap-8 bg-gray-50 overflow-hidden h-full">
+            <!-- Left Column: 정량 진단 (Quantitative) -->
+            <div class="w-1/2 flex flex-col gap-3 h-full">
+                <div class="flex items-center gap-3 border-b-2 border-blue-500 pb-2 w-full shrink-0">
+                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shadow-sm">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">정량 진단</h2>
+                </div>
+
+                <!-- Traffic Info -->
+                <div class="bg-white p-4 rounded-xl card-shadow border-l-4 border-gray-400 diagnosis-card shrink-0">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-gray-400 text-xl"><i class="fas fa-eye-slash"></i></div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg mb-1">월간 트래픽</h3>
+                            <p class="text-gray-600 text-sm">미측정 (외부 공개 추정치 없음)</p>
+                            <p class="text-xs text-gray-400 mt-1">* 트래픽 데이터 확보 및 분석 도구 도입 필요</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features Analysis -->
+                <div class="bg-white p-4 rounded-xl card-shadow border-l-4 border-red-500 diagnosis-card flex-1 flex flex-col min-h-0">
+                    <div class="flex items-start gap-4 h-full">
+                        <div class="mt-1 text-red-500 text-xl"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="flex-1 flex flex-col h-full">
+                            <h3 class="font-bold text-gray-800 text-lg mb-2">주요 현황 및 문제점</h3>
+                            <div class="grid grid-cols-2 gap-2 mb-3 shrink-0">
+                                <div class="bg-red-50 p-2 rounded text-xs text-red-700 font-medium text-center flex items-center justify-center">
+                                    <p><i class="fas fa-credit-card mr-1"></i> 결제 4개 분리</p>
+                                </div>
+                                <div class="bg-red-50 p-2 rounded text-xs text-red-700 font-medium text-center flex items-center justify-center">
+                                    <p><i class="fas fa-user-lock mr-1"></i> 분리 로그인</p>
+                                </div>
+                                <div class="bg-red-50 p-2 rounded text-xs text-red-700 font-medium text-center col-span-2 flex items-center justify-center">
+                                    <p><i class="fas fa-map-signs mr-1"></i> 흩어진 네비·장바구니·예약·조회</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-100 pt-3 mt-auto">
+                                <h4 class="font-bold text-blue-600 text-sm mb-2 flex items-center">
+                                    <i class="fas fa-tools mr-2"></i> 개선 필요 기능 (To-Be)
+                                </h4>
+                                <ul class="text-sm text-gray-600 space-y-1 ml-1">
+                                    <li class="flex items-center"><i class="fas fa-check text-blue-400 text-xs mr-2"></i><p>결제 통합 (4 → 1)</p></li>
+                                    <li class="flex items-center"><i class="fas fa-check text-blue-400 text-xs mr-2"></i><p>One-ID 및 멤버십 통합</p></li>
+                                    <li class="flex items-center"><i class="fas fa-check text-blue-400 text-xs mr-2"></i><p>통합 네비게이션/장바구니/예약 조회</p></li>
+                                    <li class="flex items-center"><i class="fas fa-check text-blue-400 text-xs mr-2"></i><p>Mobile First &amp; 여정 중심 UX</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expansion Goals -->
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 diagnosis-card shrink-0">
+                    <h3 class="font-bold text-blue-800 text-sm mb-1 flex items-center">
+                        <i class="fas fa-rocket mr-2"></i> 확장 목표
+                    </h3>
+                    <p class="text-sm text-blue-700 leading-snug">
+                        키오스크·O2O 연계, 방문 전·중·후 통합 여정 설계, 시나리오 기반 CX, CS 중심 프로세스 구축
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: 정성 진단 (Qualitative) -->
+            <div class="w-1/2 flex flex-col gap-3 h-full">
+                <div class="flex items-center gap-3 border-b-2 border-green-500 pb-2 w-full shrink-0">
+                    <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shadow-sm">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">정성 진단</h2>
+                </div>
+
+                <!-- IA / Navigation: 제목 > 요약 > 본문 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-l-4 border-orange-400 diagnosis-card flex-1 flex flex-col justify-center">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 flex-shrink-0">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg mb-2">IA / 네비게이션 분절</h3>
+                            <p class="text-red-600 text-xs font-medium bg-red-50 p-2 rounded inline-block mb-2">
+                                <i class="fas fa-times-circle mr-1"></i> 사용자가 숙박·체험·농산물 구매를 한 화면에서 탐색 및 비교하기 어려움
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                농원·리조트·이커머스를 하나의 플랫폼으로 제공하고 있으나, IA와 네비게이션이 채널·기능별로 분리되어 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UX / UI: 제목 > 요약 > 본문 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-l-4 border-teal-400 diagnosis-card flex-1 flex flex-col justify-center">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-500 flex-shrink-0">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg mb-2">단절된 UX/UI 경험</h3>
+                            <p class="text-red-600 text-xs font-medium bg-red-50 p-2 rounded inline-block mb-2">
+                                <i class="fas fa-times-circle mr-1"></i> 잦은 이탈과 재시도 발생, 사용자 피로도 증가
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                모바일 퍼스트 및 여정 중심의 단일 플로우가 부재합니다. 결제·로그인·장바구니·예약 조회가 각각 다른 진입점과 화면을 사용합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Strategy: 제목 > 요약 > 본문 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-l-4 border-green-400 diagnosis-card flex-1 flex flex-col justify-center">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-500 flex-shrink-0">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-lg mb-2">콘텐츠 연결성 부족</h3>
+                            <p class="text-red-600 text-xs font-medium bg-red-50 p-2 rounded inline-block mb-2">
+                                <i class="fas fa-times-circle mr-1"></i> 오프라인 경험과 온라인 예약의 단절
+                            </p>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                시나리오(스토리) 기반의 고객 여정과 방문 전·중·후 터치포인트 연계가 약합니다. 특히 O2O·키오스크 연계가 반영되지 않았습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-4 right-6 text-gray-400 text-xs">p. 6</div>
+    </div>
+</body>
+</html>

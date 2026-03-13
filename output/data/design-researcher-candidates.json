@@ -1,0 +1,68 @@
+[
+  {
+    "type": "Inspire",
+    "name": "Great Wolf Lodge",
+    "url": "https://www.greatwolf.com/",
+    "status": "Candidate",
+    "selection_reason": "Awwwards Nominee (2025). North America's largest family indoor water park resort chain; 80%+ reservations via digital. Mobile-first design, AI personalization, advanced content architecture. Relevant CX·통합 여정·가족형 리조트 레퍼런스.",
+    "discovery_path": "Awwwards",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "Mobile-first reservation flow, AI personalization, 명확한 정보 계층과 가족 단위 시나리오 기반 네비게이션.",
+    "award": { "source": "Awwwards", "type": "Nominee", "year": 2025 }
+  },
+  {
+    "type": "Inspire",
+    "name": "Meritage Resort & Spa",
+    "url": "https://www.meritageresort.com/",
+    "status": "Candidate",
+    "selection_reason": "Awwwards Honorable Mention (2025). Napa Valley vineyard resort. Content architecture and storytelling으로 abundance and elegance 전달. Nuxt.js·Figma·Netlify 기반 반응형, 호텔·레스토랑 콘텐츠 구조 우수.",
+    "discovery_path": "Awwwards",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "스토리텔링 기반 콘텐츠 설계, 정제된 타이포그래피 계층, 반응형 호텔/다이닝 정보 구조.",
+    "award": { "source": "Awwwards", "type": "Honorable Mention", "year": 2025 }
+  },
+  {
+    "type": "Inspire",
+    "name": "Design Hotels™",
+    "url": "https://www.designhotels.com/",
+    "status": "Candidate",
+    "selection_reason": "Awwwards SOTD (Design Hotels™ Original Experiences, 2016). 디자인 호텔 컬렉션 플랫폼. 테마별 탐색(Countryside, Mountain, Gastronomy 등), 통합 검색·예약·저장 경험. CX·통합 여정 레퍼런스.",
+    "discovery_path": "Awwwards",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "미니멀 비주얼과 비디오 콘텐츠, 테마 기반 브라우징 IA, 통합 예약·프로필·북마크 경험.",
+    "award": { "source": "Awwwards", "type": "SOTD", "year": 2016 }
+  },
+  {
+    "type": "Inspire",
+    "name": "카펠라 리조트 양양",
+    "url": "https://capellayangyang.co.kr/",
+    "status": "Candidate",
+    "selection_reason": "GDWEB WINNER PRIZE (2022). 국내 리조트. 핸섬피쉬 제작. 고급스럽고 모던한 컨셉, 블루·그린 주색상, 자연·환경 이미지. 농원·리조트 통합 플랫폼과 톤 유사.",
+    "discovery_path": "GDWEB",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "국내 수상작 기준의 컬러 시스템·타이포그래피, 자연/리조트 비주얼 톤, 모던한 레이아웃.",
+    "award": { "source": "GDWEB", "type": "WINNER PRIZE", "year": 2022 }
+  },
+  {
+    "type": "Inspire",
+    "name": "Mazzarelli Creative Resort",
+    "url": "https://www.mazzarelliresort.it/en/home/",
+    "status": "Candidate",
+    "selection_reason": "CSS Design Awards 수상(UI Design 7.82/20). 이탈리아 풀리아 부티크 호텔. 사진·타이포그래피 중심, 럭셔리 경험 전달. 농촌·올리브 농장 환경과 프리미엄 체험 연계 레퍼런스.",
+    "discovery_path": "CSS Design Awards",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "포토그래픽 레이아웃과 타이포그래피 계층, 부티크 호텔 콘텐츠 구조, 정제된 컬러 팔레트.",
+    "award": { "source": "CSS Design Awards", "type": "UI Design Award", "year": null }
+  },
+  {
+    "type": "Inspire",
+    "name": "LAAX",
+    "url": "https://www.laax.com/",
+    "status": "Candidate",
+    "selection_reason": "Behance 프로젝트(LAAX ski resort responsive website)로 소개된 스위스 스키 리조트. 반응형·UX·브랜드 포지셔닝 재런치. 고품질 이미지, 타깃별 필터링·네비게이션. O2O·시나리오 기반 여정 참고용.",
+    "discovery_path": "Behance",
+    "traffic": { "monthly_visits": null, "source": null, "confidence": "low" },
+    "design_strength": "반응형 구조, 타깃 그룹별 콘텐츠 필터링, 명확한 IA와 시즌/티켓·숙박 통합 경험.",
+    "award": null
+  }
+]

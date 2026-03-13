@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상하농원몰 벤치마킹 분석 리포트</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="common-report.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            max-width: 100%;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .bg-accent {
+            background-color: #2E7D32; /* Forest Green */
+        }
+        .text-accent {
+            color: #2E7D32;
+        }
+        .bg-secondary {
+            background-color: #E8F5E9; /* Light Green */
+        }
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        /* 표지에서 ibank 로고 흰 배경 제거: 연한 배경 + darken 블렌드 */
+        .cover-header-logos { background: #E8F5E9; padding: 6px 12px; border-radius: 8px; margin-right: -20px; }
+        .cover-header-logos .header-logo-ax { mix-blend-mode: darken; }
+    </style>
+</head>
+<body>
+    <div class="slide-container p-16">
+        <!-- Decorative Elements -->
+        <div class="decorative-circle bg-accent w-96 h-96 -top-20 -right-20"></div>
+        <div class="decorative-circle bg-blue-600 w-64 h-64 bottom-10 -left-10"></div>
+
+        <!-- Main Content -->
+        <div class="flex flex-col h-full justify-between relative z-10">
+            <!-- Top Section: 로고·라벨 (날짜 삭제, 대외비 아래 라인 없음) -->
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center gap-2">
+                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold tracking-wide">대외비</span>
+                    <span class="text-gray-500 text-sm">벤치마킹 리포트</span>
+                </div>
+                <div class="header-logos cover-header-logos">
+                    <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
+                    <span class="border-l border-gray-400 h-4"></span>
+                    <img src="assets/logo-ibankax.png" alt="ibank AX" class="header-logo header-logo-ax">
+                </div>
+            </div>
+
+            <!-- Middle + Bottom: 제목·설명·리포트 구성 박스를 하단 쪽으로 묶어서 하단 빈 공간 최소화 -->
+            <div class="flex-1 flex flex-col justify-end items-start pt-4">
+                <h1 class="text-5xl font-black text-gray-800 leading-tight mb-5" style="font-size: 32pt; line-height: 1.25;">
+                    상하농원몰<br>
+                    <span class="text-accent">벤치마킹 분석 리포트</span>
+                </h1>
+                <p class="text-gray-600 text-lg max-w-3xl leading-relaxed text-left mb-1">
+                    본 리포트는 상하농원몰의 리뉴얼 및 고도화를 위해 현황을 진단하고,
+                </p>
+                <p class="text-gray-600 text-lg max-w-3xl leading-relaxed text-left mb-8">
+                    동종업계 트렌드와 벤치마킹 사례를 분석하여 최적의 TO-BE 전략을 제시합니다.
+                </p>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 w-full text-left">
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">리포트 구성</h3>
+                <div class="flex justify-between items-center relative">
+                    <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-100 -z-10 transform -translate-y-1/2"></div>
+                    <div class="flex flex-col items-center bg-white px-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold mb-3 border-2 border-blue-100">1</div>
+                        <p class="font-bold text-gray-800 text-center">현재 사이트 진단</p>
+                        <p class="text-xs text-gray-500 mt-1">5대 주요 문제점 도출</p>
+                    </div>
+                    <div class="text-gray-300"><i class="fas fa-chevron-right text-xl"></i></div>
+                    <div class="flex flex-col items-center bg-white px-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center text-xl font-bold mb-3 border-2 border-green-100">2</div>
+                        <p class="font-bold text-gray-800 text-center">시장·트렌드 조사</p>
+                        <p class="text-xs text-gray-500 mt-1">농원·리조트 &amp; 고객경험/O2O</p>
+                    </div>
+                    <div class="text-gray-300"><i class="fas fa-chevron-right text-xl"></i></div>
+                    <div class="flex flex-col items-center bg-white px-4">
+                        <div class="w-12 h-12 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold mb-3 border-2 border-teal-100">3</div>
+                        <p class="font-bold text-gray-800 text-center">벤치마킹 &amp; 전략</p>
+                        <p class="text-xs text-gray-500 mt-1">에버랜드·인스파이어 등</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

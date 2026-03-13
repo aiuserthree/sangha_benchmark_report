@@ -1,0 +1,25 @@
+{
+  "pain_points": [
+    {"code": "PP-1", "title": "분리 로그인", "description": "채널·서비스별 로그인 분리로 One-ID·멤버십 통합 불가", "severity": "high"},
+    {"code": "PP-2", "title": "결제 4개 분리", "description": "결제 수단·화면 4개 분리로 통합 결제 경험 부재", "severity": "high"},
+    {"code": "PP-3", "title": "흩어진 네비게이션", "description": "채널·기능별 정보 구조로 통합 네비·여정 인지 어려움", "severity": "high"},
+    {"code": "PP-4", "title": "분리 장바구니", "description": "서비스·채널별 장바구니로 통합 담기·결제 불가", "severity": "high"},
+    {"code": "PP-5", "title": "흩어진 예약·주문 조회", "description": "예약·주문 조회 화면 분리로 일괄 확인·변경·취소 어려움", "severity": "high"}
+  ],
+  "direct": [
+    {"code": "D-1", "name": "에버랜드", "url": "https://www.everland.com/everland/home/main"},
+    {"code": "D-2", "name": "인스파이어 리조트", "url": "https://www.inspireresorts.com/ko"},
+    {"code": "D-3", "name": "파라다이스 호텔", "url": "https://www.p-city.com/"},
+    {"code": "D-4", "name": "롯데리조트", "url": "https://www.lotteresort.com/main/ko/index"},
+    {"code": "D-5", "name": "오크밸리 리조트", "url": "https://oakvalley.co.kr/overview"},
+    {"code": "D-6", "name": "켄싱턴호텔앤리조트", "url": "https://www.kensington.co.kr/"}
+  ],
+  "indirect": [
+    {"code": "I-1", "name": "디즈니랜드 리조트", "url": "https://disneyland.disney.go.com/", "feature": "테마파크·리조트·호텔의 CX·고객 여정 설계"},
+    {"code": "I-2", "name": "맥도날드", "url": "https://www.mcdonalds.com/us/en-us.html", "feature": "O2O·키오스크를 활용한 통합 여정"}
+  ],
+  "inspire": [
+    {"code": "R-1", "name": "Great Wolf Lodge", "url": "https://www.greatwolf.com/"},
+    {"code": "R-2", "name": "카펠라 리조트 양양", "url": "https://capellayangyang.co.kr/"}
+  ]
+}
