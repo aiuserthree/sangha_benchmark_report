@@ -44,11 +44,11 @@
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
-            height: 100%;
+            min-height: 0;
             display: flex;
             flex-direction: column;
             border-left: 6px solid #C62828;
-            padding: 1.25rem;
+            padding: 1rem;
         }
         .severity-badge {
             background-color: #C62828;
@@ -59,12 +59,14 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+        .main-content { display: flex; flex-direction: column; min-height: 0; }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 1.25rem;
-            height: 100%;
+            gap: 1rem;
+            flex: 1;
+            min-height: 0;
             padding: 0.5rem;
         }
         .icon-circle {
@@ -98,24 +100,25 @@
         </div>
 
         <!-- Main Content -->
-        <div class="flex-1 bg-gray-50 p-10 overflow-hidden">
+        <div class="flex-1 bg-gray-50 p-6 overflow-hidden main-content">
+            <p class="text-gray-800 font-bold text-base mb-2 shrink-0" style="line-height: 1.5;">분리 로그인·결제·네비·장바구니·조회로 한 번의 가입·결제·탐색이 불가능합니다. One-ID와 통합 결제·네비·장바구니 구축이 시급합니다.</p>
             <div class="grid-container">
                 <!-- PP-1 -->
                 <div class="pain-point-card">
-                    <div class="flex justify-between items-start mb-3">
+                    <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center">
                             <div class="icon-circle">
                                 <i class="fas fa-user-lock"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">분리 로그인</h3>
+                                <h3 class="text-base font-bold text-gray-800">분리 로그인</h3>
                                 <p class="text-xs text-gray-500 font-medium">채널별 계정 분리</p>
                             </div>
                         </div>
                         <span class="severity-badge">High</span>
                     </div>
-                    <div class="flex-1 border-t border-gray-100 pt-3">
-                        <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                    <div class="flex-1 border-t border-gray-100 pt-2 min-h-0 overflow-hidden">
+                        <p class="text-gray-700 text-sm leading-relaxed mb-1">
                             농원·리조트·이커머스 등 채널·서비스별로 로그인이 나뉘어 있어, <span class="font-bold text-red-600">한 번 가입·로그인으로 전체 서비스 이용 불가</span>.
                         </p>
                         <p class="text-gray-600 text-xs bg-red-50 p-2 rounded border border-red-100">
@@ -126,20 +129,20 @@
 
                 <!-- PP-2 -->
                 <div class="pain-point-card">
-                    <div class="flex justify-between items-start mb-3">
+                    <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center">
                             <div class="icon-circle">
                                 <i class="fas fa-credit-card"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">결제 4개 분리</h3>
+                                <h3 class="text-base font-bold text-gray-800">결제 4개 분리</h3>
                                 <p class="text-xs text-gray-500 font-medium">통합 결제 부재</p>
                             </div>
                         </div>
                         <span class="severity-badge">High</span>
                     </div>
-                    <div class="flex-1 border-t border-gray-100 pt-3">
-                        <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                    <div class="flex-1 border-t border-gray-100 pt-2 min-h-0 overflow-hidden">
+                        <p class="text-gray-700 text-sm leading-relaxed mb-1">
                             결제 수단·화면이 4개로 분리됨. 장바구니·예약·상품이 <span class="font-bold text-red-600">서로 다른 결제 플로우</span>를 사용.
                         </p>
                         <p class="text-gray-600 text-xs bg-red-50 p-2 rounded border border-red-100">
@@ -150,20 +153,20 @@
 
                 <!-- PP-3 -->
                 <div class="pain-point-card">
-                    <div class="flex justify-between items-start mb-3">
+                    <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center">
                             <div class="icon-circle">
                                 <i class="fas fa-sitemap"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">흩어진 네비게이션</h3>
+                                <h3 class="text-base font-bold text-gray-800">흩어진 네비게이션</h3>
                                 <p class="text-xs text-gray-500 font-medium">정보 구조 분절</p>
                             </div>
                         </div>
                         <span class="severity-badge">High</span>
                     </div>
-                    <div class="flex-1 border-t border-gray-100 pt-3">
-                        <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                    <div class="flex-1 border-t border-gray-100 pt-2 min-h-0 overflow-hidden">
+                        <p class="text-gray-700 text-sm leading-relaxed mb-1">
                             채널·기능별로 네비게이션 분리. 숙박·체험·쇼핑을 <span class="font-bold text-red-600">한 경로에서 탐색·비교 불가</span>.
                         </p>
                         <p class="text-gray-600 text-xs bg-red-50 p-2 rounded border border-red-100">
@@ -174,20 +177,20 @@
 
                 <!-- PP-4 -->
                 <div class="pain-point-card">
-                    <div class="flex justify-between items-start mb-3">
+                    <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center">
                             <div class="icon-circle">
                                 <i class="fas fa-shopping-cart"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">분리 장바구니</h3>
+                                <h3 class="text-base font-bold text-gray-800">분리 장바구니</h3>
                                 <p class="text-xs text-gray-500 font-medium">통합 담기 불가</p>
                             </div>
                         </div>
                         <span class="severity-badge">High</span>
                     </div>
-                    <div class="flex-1 border-t border-gray-100 pt-3">
-                        <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                    <div class="flex-1 border-t border-gray-100 pt-2 min-h-0 overflow-hidden">
+                        <p class="text-gray-700 text-sm leading-relaxed mb-1">
                             장바구니가 서비스·채널별로 분리되어 <span class="font-bold text-red-600">농산물·체험·숙박 동시 결제 불가</span>.
                         </p>
                         <p class="text-gray-600 text-xs bg-red-50 p-2 rounded border border-red-100">
@@ -198,20 +201,20 @@
 
                 <!-- PP-5 -->
                 <div class="pain-point-card">
-                    <div class="flex justify-between items-start mb-3">
+                    <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center">
                             <div class="icon-circle">
                                 <i class="fas fa-search-location"></i>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-800">흩어진 예약·조회</h3>
+                                <h3 class="text-base font-bold text-gray-800">흩어진 예약·조회</h3>
                                 <p class="text-xs text-gray-500 font-medium">마이페이지 분산</p>
                             </div>
                         </div>
                         <span class="severity-badge">High</span>
                     </div>
-                    <div class="flex-1 border-t border-gray-100 pt-3">
-                        <p class="text-gray-700 text-sm leading-relaxed mb-2">
+                    <div class="flex-1 border-t border-gray-100 pt-2 min-h-0 overflow-hidden">
+                        <p class="text-gray-700 text-sm leading-relaxed mb-1">
                             예약·주문 조회가 화면·시스템별로 흩어져 있음. <span class="font-bold text-red-600">숙박·체험·주문을 한 곳에서 확인 불가</span>.
                         </p>
                         <p class="text-gray-600 text-xs bg-red-50 p-2 rounded border border-red-100">
@@ -222,15 +225,15 @@
 
                 <!-- Summary / Insight Card -->
                 <div class="pain-point-card bg-gray-800 border-none text-white" style="border-left: none !important;">
-                    <div class="flex flex-col h-full justify-center items-center text-center p-4" style="background-color: rgb(180, 49, 42);">
-                        <div class="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mb-4 text-2xl text-yellow-400">
+                    <div class="flex flex-col h-full justify-center items-center text-center p-3" style="background-color: rgb(180, 49, 42);">
+                        <div class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center mb-2 text-xl text-yellow-400">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">핵심 시사점</h3>
-                        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                        <h3 class="text-lg font-bold mb-1">핵심 시사점</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-2">
                             5대 주요 문제점 모두 <span class="text-yellow-400 font-bold">"통합(Integration)"</span>의 부재에서 기인함.
                         </p>
-                        <div class="w-full bg-white bg-opacity-10 p-3 rounded text-xs text-left">
+                        <div class="w-full bg-white bg-opacity-10 p-2 rounded text-xs text-left">
                             <p class="mb-1"><i class="fas fa-check text-green-400 mr-2"></i>One-ID 도입 시급</p>
                             <p class="mb-1"><i class="fas fa-check text-green-400 mr-2"></i>통합 결제/장바구니 구현 필요</p>
                             <p><i class="fas fa-check text-green-400 mr-2"></i>네비게이션 구조 일원화</p>
