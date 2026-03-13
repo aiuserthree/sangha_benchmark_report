@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indirect &amp; Inspire 핵심 포인트</title>
+    <title>타 산업 &amp; 디자인 벤치마킹 핵심 포인트</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -46,10 +46,12 @@
             border-radius: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             border: 1px solid #E5E7EB;
-            padding: 1.25rem;
+            padding: 0.875rem;
             display: flex;
             flex-direction: column;
+            min-height: 0;
             height: 100%;
+            overflow: hidden;
             transition: transform 0.2s;
         }
         .card-tag {
@@ -67,10 +69,10 @@
         .check-list-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 0.35rem;
-            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+            font-size: 0.8rem;
             color: #4B5563;
-            line-height: 1.4;
+            line-height: 1.35;
         }
         .check-list-item:last-child { margin-bottom: 0; }
         .check-list-item i {
@@ -81,13 +83,22 @@
         .content-wrapper {
             height: calc(100% - 88px);
         }
+        .bench-card .card-body {
+            min-height: 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .bench-card .card-body::-webkit-scrollbar { width: 3px; }
+        .bench-card .card-body::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <!-- Header -->
         <div class="toc-header px-10 py-5 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">Indirect &amp; Inspire 핵심 포인트</h1>
+            <h1 class="text-2xl font-bold text-gray-800">타 산업 &amp; 디자인 벤치마킹 핵심 포인트</h1>
             <div class="header-logos">
                 <img src="assets/logo-sangha.png" alt="상하농원몰" class="header-logo">
                 <span class="border-l border-gray-300 h-4"></span>
@@ -97,18 +108,18 @@
 
         <!-- Main Content -->
         <div class="content-wrapper bg-gray-50 p-8 overflow-hidden flex gap-8">
-            <!-- Left Column: Indirect Competitors (2) -->
+            <!-- Left Column: 타 산업 (2) -->
             <div class="w-1/2 flex flex-col h-full">
                 <div class="section-header border-b-2 border-blue-200">
                     <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3 shadow-sm">
                         <i class="fas fa-random text-lg"></i>
                     </div>
                     <div>
-                        <h2 class="text-xl font-bold text-gray-800">Indirect Competitor</h2>
-                        <p class="text-xs text-gray-500">타 산업·기능 벤치마크 (기능성 중심)</p>
+                        <h2 class="text-xl font-bold text-gray-800">타 산업</h2>
+                        <p class="text-xs text-gray-500">기능 벤치마크 (기능성 중심)</p>
                     </div>
                 </div>
-                <div class="grid grid-rows-2 gap-4 flex-1 overflow-hidden pb-1">
+                <div class="grid grid-rows-2 gap-3 flex-1 min-h-0 overflow-hidden pb-1">
                     <!-- I-1 -->
                     <div class="bench-card border-l-8 border-blue-500">
                         <div class="flex justify-between items-start mb-2">
@@ -117,10 +128,10 @@
                                 <i class="fas fa-globe text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="font-bold text-gray-800 text-lg mb-0.5">디즈니랜드 (Disneyland)</h3>
-                        <p class="text-xs text-gray-500 mb-3 font-medium">테마파크·리조트 통합 고객 여정 (CX)</p>
-                        <div class="mt-auto bg-gray-50 rounded-lg p-3 border border-gray-100 flex-1 flex flex-col justify-center">
-                            <p class="text-xs font-bold text-blue-800 mb-2 uppercase tracking-wide">Benchmarking Points</p>
+                        <h3 class="font-bold text-gray-800 text-base mb-0.5 shrink-0">디즈니랜드 (Disneyland)</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-medium shrink-0">테마파크·리조트 통합 고객 여정 (CX)</p>
+                        <div class="card-body mt-auto bg-gray-50 rounded-lg p-2.5 border border-gray-100 flex flex-col">
+                            <p class="text-xs font-bold text-blue-800 mb-1.5 uppercase tracking-wide">Benchmarking Points</p>
                             <div class="check-list-item">
                                 <i class="fas fa-check-circle text-blue-500"></i>
                                 <p><strong>Lightning Lane·가상 대기·모바일 주문</strong> 등 앱 내 기능 통합</p>
@@ -143,10 +154,10 @@
                                 <i class="fas fa-utensils text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="font-bold text-gray-800 text-lg mb-0.5">맥도날드 (McDonald's)</h3>
-                        <p class="text-xs text-gray-500 mb-3 font-medium">O2O·키오스크 통합 여정 및 결제</p>
-                        <div class="mt-auto bg-gray-50 rounded-lg p-3 border border-gray-100 flex-1 flex flex-col justify-center">
-                            <p class="text-xs font-bold text-blue-800 mb-2 uppercase tracking-wide">Benchmarking Points</p>
+                        <h3 class="font-bold text-gray-800 text-base mb-0.5 shrink-0">맥도날드 (McDonald's)</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-medium shrink-0">O2O·키오스크 통합 여정 및 결제</p>
+                        <div class="card-body mt-auto bg-gray-50 rounded-lg p-2.5 border border-gray-100 flex flex-col">
+                            <p class="text-xs font-bold text-blue-800 mb-1.5 uppercase tracking-wide">Benchmarking Points</p>
                             <div class="check-list-item">
                                 <i class="fas fa-check-circle text-blue-500"></i>
                                 <p>전점 <strong>키오스크·앱 선주문·픽업</strong> 시스템과 <strong>One-ID</strong> 연동</p>
@@ -171,11 +182,11 @@
                         <i class="fas fa-lightbulb text-lg"></i>
                     </div>
                     <div>
-                        <h2 class="text-xl font-bold text-gray-800">Design Inspiration</h2>
+                        <h2 class="text-xl font-bold text-gray-800">디자인 참조</h2>
                         <p class="text-xs text-gray-500">수상작 &amp; 디자인 레퍼런스 (Look &amp; Feel)</p>
                     </div>
                 </div>
-                <div class="grid grid-rows-2 gap-4 flex-1 overflow-hidden pb-1">
+                <div class="grid grid-rows-2 gap-3 flex-1 min-h-0 overflow-hidden pb-1">
                     <!-- R-1 -->
                     <div class="bench-card border-l-8 border-teal-500">
                         <div class="flex justify-between items-start mb-2">
@@ -184,10 +195,10 @@
                                 <i class="fas fa-trophy text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="font-bold text-gray-800 text-lg mb-0.5">Great Wolf Lodge</h3>
-                        <p class="text-xs text-gray-500 mb-3 font-medium">Awwwards Nominee (2025) / 가족형 리조트</p>
-                        <div class="mt-auto bg-gray-50 rounded-lg p-3 border border-gray-100 flex-1 flex flex-col justify-center">
-                            <p class="text-xs font-bold text-teal-800 mb-2 uppercase tracking-wide">Benchmarking Points</p>
+                        <h3 class="font-bold text-gray-800 text-base mb-0.5 shrink-0">Great Wolf Lodge</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-medium shrink-0">Awwwards Nominee (2025) / 가족형 리조트</p>
+                        <div class="card-body mt-auto bg-gray-50 rounded-lg p-2.5 border border-gray-100 flex flex-col">
+                            <p class="text-xs font-bold text-teal-800 mb-1.5 uppercase tracking-wide">Benchmarking Points</p>
                             <div class="check-list-item">
                                 <i class="fas fa-check-circle text-teal-500"></i>
                                 <p><strong>Mobile-first 예약 시스템</strong> 및 가족 단위 시나리오 네비게이션</p>
@@ -210,10 +221,10 @@
                                 <i class="fas fa-paint-brush text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="font-bold text-gray-800 text-lg mb-0.5">카펠라 리조트 양양</h3>
-                        <p class="text-xs text-gray-500 mb-3 font-medium">GDWEB WINNER (2022) / 프리미엄 톤앤매너</p>
-                        <div class="mt-auto bg-gray-50 rounded-lg p-3 border border-gray-100 flex-1 flex flex-col justify-center">
-                            <p class="text-xs font-bold text-teal-800 mb-2 uppercase tracking-wide">Benchmarking Points</p>
+                        <h3 class="font-bold text-gray-800 text-base mb-0.5 shrink-0">카펠라 리조트 양양</h3>
+                        <p class="text-xs text-gray-500 mb-2 font-medium shrink-0">GDWEB WINNER (2022) / 프리미엄 톤앤매너</p>
+                        <div class="card-body mt-auto bg-gray-50 rounded-lg p-2.5 border border-gray-100 flex flex-col">
+                            <p class="text-xs font-bold text-teal-800 mb-1.5 uppercase tracking-wide">Benchmarking Points</p>
                             <div class="check-list-item">
                                 <i class="fas fa-check-circle text-teal-500"></i>
                                 <p><strong>자연 친화적 비주얼(블루/그린)</strong>과 여백을 활용한 프리미엄 무드</p>
